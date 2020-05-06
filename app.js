@@ -11,8 +11,8 @@ let result = '';
 // Creates and formats the api query
 function createUrl() {
 	const queryFieldValue = inputSearch.value.split(" ").join("+");
-	const API_KEY = "AIzaSyBgi-Uo2ws2rADXXUoTuvmAYOZG2TCjzWQ"; 
-	return `https://www.googleapis.com/books/v1/volumes?q=${queryFieldValue}&maxResults=10&keyes&key=${API_KEY}`;
+	const api_key = "AIzaSyBgi-Uo2ws2rADXXUoTuvmAYOZG2TCjzWQ";
+	return `https://www.googleapis.com/books/v1/volumes?q=${queryFieldValue}&maxResults=10&keyes&key=${api_key}`;
 }
 
 //Fetches the book data and creates html

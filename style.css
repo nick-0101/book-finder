@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+body{
+  background: #f2f2f2;
+  font-family: 'Lato', sans-serif;
+}
+h1 {
+  color:#00B4CC;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+#searchTerm {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+  font-size: 15px;
+}
+
+#searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 45px;
+  height: 46px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+  outline:none;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Loader */
+#loader {
+  display: block;
+}
+
+/* Book Result */
+
+#loader:not(.loading) {
+	display: none;
+}
+
+#bookRepsonse {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 30px;
+  padding-top: 150px;
+}
+
+.book {
+  position: relative;
+	display: flex;
+  flex-wrap: wrap;
+	justify-content: left;
+	background: #f2f2f2;
+	border-radius: 5px;
+	padding: 15px;
+  border: 1px solid #bdbdbd;
+}
+
+.book_info {
+  padding: 5px 0 0 15px;
+}
+
+footer {
+  position: absolute;
+  bottom:0;
+  padding:10px;
+}
+
+@media only screen and (max-width: 800px) {
+  #bookRepsonse {
+  	grid-template-columns: 1fr;
+  }
+}

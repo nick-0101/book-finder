@@ -1,3 +1,5 @@
+import {config} from './config.js';
+
 // Hides loader
 window.onload = () => {loader.classList.remove("loading");}
 
